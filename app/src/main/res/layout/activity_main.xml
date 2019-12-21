@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_linear"
+        android:gravity="center_horizontal|start"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_new"
+            android:text="@string/file_new"
+            android:insetRight="4dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_open"
+            android:text="@string/file_open"
+            android:insetRight="4dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_save"
+            android:text="@string/file_save"
+            android:insetRight="4dp"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/edt_title"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:hint="@string/title"
+            android:inputType="textPersonName|textNoSuggestions"
+            android:padding="@dimen/tiny_margin"/>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/til_edit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/header_linear">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/edt_file"
+            android:gravity="top|start"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:padding="@dimen/tiny_margin"
+            tools:text="testing bro"
+            android:background="@android:color/white"
+            />
+        
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>
